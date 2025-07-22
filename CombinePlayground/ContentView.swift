@@ -6,12 +6,6 @@ enum UpdateOrigin {
     case network
 }
 
-struct Data<T, U> {
-    let keyPath: ReferenceWritableKeyPath<T, U>
-    let value: U
-    let source: UpdateOrigin
-}
-
 protocol UpdatableObject<Value>: ObservableObject {
     associatedtype Value = ObservableObject
     
