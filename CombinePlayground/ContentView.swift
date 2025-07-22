@@ -7,7 +7,7 @@ enum UpdateOrigin {
 }
 
 protocol UpdatableObject<Value>: ObservableObject {
-    associatedtype Value = ObservableObject
+    associatedtype Value = Any
     
     func uiDidUpdateValue<Value>(at keyPath: PartialKeyPath<Self>, to value: Value)
 }
